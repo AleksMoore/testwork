@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Test work</title>
+    <link href="/stylesheets/bundle/site.css" rel="stylesheet" />
+    <script src="/javascripts/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/javascripts/jquery/prism.js"></script>
+    <script src="/javascripts/bundle/all.min.js"></script>
+  </head>
+  <body>
+    <div class="page__wrapper">
+  <div class="page__menu">
+    <div class="logo">
+<a href="/">                <img src="/images/logo.png" alt="Jivosite for developers" />
+</a>        <span>for developers</span>
+    </div>
+    <div class="toggle">
+        <a href="#" class="toggle__btn">
+          <span></span>
+        </a>
+    </div>
+    <nav class="menu">
+        <ul class="menu__items">
+          <li class="menu__item">
+            <a href="/">JavaScript API</a>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a href="/">Methods and functions</a>
+              </li>
+              <li class="menu__list-item">
+                  <a href="/">chatMode</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">getContactInfo</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/" class="active">getVisitorNumber</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">setContactInfo</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">setCustomData</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">setRules</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">setUserToken</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">showProactiveInvitation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="/">Webhooks</a>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+              <a href="/">Events</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">chat_accepted</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">chat_finished</a>
+              </li>
+              <li class="menu__list-item">
+              <a href="/">offline_message</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+  </div>
+  <div class="page__info">
+    <div class="paragraph">
+      <div class="paragraph__text">
+        <h1>JivoSite API для разработчиков</h1>
+        <p>JivoSite предоставляет разработчикам два набора инструментов для интеграции:</p>
+        <p><strong>Клиентская часть - JavaScript API виджета, позволяющее управлять виджетом</strong>, который отображается пользователю. С помощью него можно управлять окном чата, а так же передавать произвольную информацию со страницы, на которой размещено окно чата, в приложение оператора (например, можно передать дополнительную информацию о пользователе, которая так же будет сохранена в журнале диалогов).</p>
+        <p><strong>Серверная часть - Webhooks API</strong>, позволяющее получать уведомления о начале или завершении чата на стороне вашего сервера, а так же передавать в JivoSite дополнительную информацию для отображения в приложени оператора в ответе на HTTP-запросы.</p>
+      </div>
+    </div>
+    <div class="paragraph">
+      <div class="paragraph__text">
+        <h2>JavaScript API</h2>
+        <h3>Methods and functions</h3>
+        <p>JivoSite вызывает перечисленные ниже функции на странице, чтобы сообщить о возникновении события. Вы можете объявить на странице любую из этих функций и выполнять в ней логику обработки возникшего события. Например, по событию jivo_onIntroduction вы можете получить введенные клиентом контактные данные.</p>
+        <p>Сallback-функции</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>Название</th>
+              <th>Тип</th>
+              <th>Описание</th>
+            </tr>
+            <tr>
+              <td>jivo_onLoadCallback</td>
+              <td>void</td>
+              <td>Вызывается при завершении инициализации виджета JivoSite</td>
+            </tr>
+            <tr>
+              <td>jivo_onOpen</td>
+              <td>void</td>
+              <td>Вызывается при открытии окна диалога JivoSite</td>
+            </tr>
+            <tr>
+              <td>jivo_onClose</td>
+              <td>void</td>
+              <td>Сворачивание окна диалога JivoSite</td>
+            </tr>
+            <tr>
+              <td>jivo_onIntroduction</td>
+              <td>void</td>
+              <td>Посетитель ввёл контактные данные</td>
+            </tr>
+            <tr>
+              <td>jivo_onResizeCallback</td>
+              <td>void</td>
+              <td>Коллбек, срабатывающий при любом изменении размеров виджета</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="paragraph">
+      <div class="paragraph__text">
+        <h3>chatMode</h3>
+        <p>С помощью этого метогода можно получить текущее состояние операторов.</p>
+        <h3>getContactInfo</h3>
+        <p>Считывает данные посетителя в виде структуры contact_info, которые посетитель ввел в форме представления. Если посетитель не заполнил какие-либо поля, в их значении будет null.</p>
+      </div>
+      <div class="paragraph__code">
+        <pre class="copyCode">
+          <code class="language-js">
+$(document).ready(function(){
+ $(".toggle__btn").click(function () {
+     $('.menu').toggleClass("active");
+ });
+          </code>
+        </pre>
+      <input type="button" value="Скопировать сниппет" class="copyBtn"/>
+      </div>
+    </div>
+    <div class="code-zone"></div>
+  </div>
+</div>
+
+  </body>
+</html>
