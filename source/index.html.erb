@@ -1,0 +1,144 @@
+---
+title: Test work
+---
+
+<div class="page__wrapper">
+  <div class="page__menu">
+    <div class="logo">
+        <% link_to '/' do %>
+                <%= image_tag("logo.png", alt:"Jivosite for developers") %>
+        <% end %>
+        <span>for developers</span>
+    </div>
+    <div class="toggle">
+        <a href="#" class="toggle__btn">
+          <span></span>
+        </a>
+    </div>
+    <nav class="menu">
+        <ul class="menu__items">
+          <li class="menu__item">
+            <% link_to '/' do %>JavaScript API<% end %>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <% link_to '/' do %>Methods and functions<% end%>
+              </li>
+              <li class="menu__list-item">
+                  <% link_to '/' do %>chatMode<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>getContactInfo<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/', :class => "active" do %>getVisitorNumber<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>setContactInfo<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>setCustomData<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>setRules<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>setUserToken<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>showProactiveInvitation<% end %>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <% link_to '/' do %>Webhooks<% end %>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+              <% link_to '/' do %>Events<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>chat_accepted<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>chat_finished<% end %>
+              </li>
+              <li class="menu__list-item">
+              <% link_to '/' do %>offline_message<% end %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+  </div>
+  <div class="page__info">
+    <div class="paragraph">
+      <div class="paragraph__text">
+        <h1>JivoSite API для разработчиков</h1>
+        <p>JivoSite предоставляет разработчикам два набора инструментов для интеграции:</p>
+        <p><strong>Клиентская часть - JavaScript API виджета, позволяющее управлять виджетом</strong>, который отображается пользователю. С помощью него можно управлять окном чата, а так же передавать произвольную информацию со страницы, на которой размещено окно чата, в приложение оператора (например, можно передать дополнительную информацию о пользователе, которая так же будет сохранена в журнале диалогов).</p>
+        <p><strong>Серверная часть - Webhooks API</strong>, позволяющее получать уведомления о начале или завершении чата на стороне вашего сервера, а так же передавать в JivoSite дополнительную информацию для отображения в приложени оператора в ответе на HTTP-запросы.</p>
+      </div>
+    </div>
+    <div class="paragraph">
+      <div class="paragraph__text">
+        <h2>JavaScript API</h2>
+        <h3>Methods and functions</h3>
+        <p>JivoSite вызывает перечисленные ниже функции на странице, чтобы сообщить о возникновении события. Вы можете объявить на странице любую из этих функций и выполнять в ней логику обработки возникшего события. Например, по событию jivo_onIntroduction вы можете получить введенные клиентом контактные данные.</p>
+        <p>Сallback-функции</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>Название</th>
+              <th>Тип</th>
+              <th>Описание</th>
+            </tr>
+            <tr>
+              <td>jivo_onLoadCallback</td>
+              <td>void</td>
+              <td>Вызывается при завершении инициализации виджета JivoSite</td>
+            </tr>
+            <tr>
+              <td>jivo_onOpen</td>
+              <td>void</td>
+              <td>Вызывается при открытии окна диалога JivoSite</td>
+            </tr>
+            <tr>
+              <td>jivo_onClose</td>
+              <td>void</td>
+              <td>Сворачивание окна диалога JivoSite</td>
+            </tr>
+            <tr>
+              <td>jivo_onIntroduction</td>
+              <td>void</td>
+              <td>Посетитель ввёл контактные данные</td>
+            </tr>
+            <tr>
+              <td>jivo_onResizeCallback</td>
+              <td>void</td>
+              <td>Коллбек, срабатывающий при любом изменении размеров виджета</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="paragraph">
+      <div class="paragraph__text">
+        <h3>chatMode</h3>
+        <p>С помощью этого метогода можно получить текущее состояние операторов.</p>
+        <h3>getContactInfo</h3>
+        <p>Считывает данные посетителя в виде структуры contact_info, которые посетитель ввел в форме представления. Если посетитель не заполнил какие-либо поля, в их значении будет null.</p>
+      </div>
+      <div class="paragraph__code">
+        <pre class="copyCode">
+          <code class="language-js">
+$(document).ready(function(){
+ $(".toggle__btn").click(function () {
+     $('.menu').toggleClass("active");
+ });
+          </code>
+        </pre>
+      <input type="button" value="Скопировать сниппет" class="copyBtn"/>
+      </div>
+    </div>
+    <div class="code-zone"></div>
+  </div>
+</div>

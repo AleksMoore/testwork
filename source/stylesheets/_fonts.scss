@@ -1,0 +1,65 @@
+$font-content: Circe-Light, sans-serif;
+$font-headline: Circe-Bold, sans-serif;
+$font-menu-text: BrandonText-Regular, sans-serif;
+$font-menu-headline: BrandonText-Bold, sans-serif;
+$font-code: SourceCodePro-Regular, sans-serif;
+
+@font-face {
+  font-family: 'Circe-Light';
+  src: url('/fonts/Circe-Light.eot');
+  src: url('/fonts/Circe-Light.woff2') format('woff2'),
+       url('/fonts/Circe-Light.woff') format('woff'),
+       url('/fonts/Circe-Light.ttf') format('truetype'),
+       url('/fonts/Circe-Light.svg#Circe-Light') format('svg'),
+       url('/fonts/Circe-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe-Bold';
+  src: url('/fonts/Circe-Bold.eot');
+  src: url('/fonts/Circe-Bold.woff2') format('woff2'),
+       url('/fonts/Circe-Bold.woff') format('woff'),
+       url('/fonts/Circe-Bold.ttf') format('truetype'),
+       url('/fonts/Circe-Bold.svg#Circe-Bold') format('svg'),
+       url('/fonts/Circe-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrandonText-Regular';
+  src: url('/fonts/BrandonText-Regular.eot');
+  src: url('/fonts/BrandonText-Regular.woff2') format('woff2'),
+       url('/fonts/BrandonText-Regular.woff') format('woff'),
+       url('/fonts/BrandonText-Regular.ttf') format('truetype'),
+       url('/fonts/BrandonText-Regular.svg#BrandonText-Regular') format('svg'),
+       url('/fonts/BrandonText-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrandonText-Bold';
+  src: url('/fonts/BrandonText-Bold.eot');
+  src: url('/fonts/BrandonText-Bold.woff2') format('woff2'),
+       url('/fonts/./fonts/BrandonText-Bold.woff') format('woff'),
+       url('/fonts/BrandonText-Bold.ttf') format('truetype'),
+       url('/fonts/BrandonText-Bold.svg#BrandonText-Bold') format('svg'),
+       url('/fonts/BrandonText-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceCodePro-Regular';
+  src: url('/fonts/SourceCodePro-Regular.eot');
+  src: url('/fonts/SourceCodePro-Regular.woff2') format('woff2'),
+       url('/fonts/SourceCodePro-Regular.woff') format('woff'),
+       url('/fonts/SourceCodePro-Regular.ttf') format('truetype'),
+       url('/fonts/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg'),
+       url('/fonts/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
