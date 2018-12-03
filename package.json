@@ -1,0 +1,31 @@
+{
+  "name": "middleman-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jquery": "^1.1.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-wait": "0.0.2",
+    "imagemin-pngquant": "^4.2.2",
+    "jquery": "^3.3.1",
+    "jsdom": "^13.0.0"
+  },
+  "dependencies": {
+    "pump": "^3.0.0"
+  }
+}
