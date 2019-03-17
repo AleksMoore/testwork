@@ -1,6 +1,6 @@
 # middleman+gulp(sass)
 
-Для старта проекта нужно установить middleman и ruby on rails
+Для старта проекта нужно установить ruby on rails и middleman
 
 <pre>https://middlemanapp.com/basics/install</pre>
 
