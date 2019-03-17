@@ -4,6 +4,6 @@
 
 <pre>https://middlemanapp.com/basics/install</pre>
 
-<h2>Project setup</h2>
+<h2>Project start</h2>
 
 <pre>middleman server</pre>
